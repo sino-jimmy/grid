@@ -1,0 +1,10 @@
+<table>
+	<% for(var i = 0,len = columnModels.length; i < len;i++) { %>
+		<th><%= columnModels.text %></th>
+	<% } %>	
+	<% for(i = 0, len = data.length; i < len; i++) {%> 
+		<% for(var p in data[i]) {%>
+			<td>data[i][p]</td>
+		<%}%>
+	<%}%>
+</table>

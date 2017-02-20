@@ -1,0 +1,32 @@
+{
+  "name": "grid",
+  "version": "1.0.0",
+  "description": "about grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sino-jimmy/grid.git"
+  },
+  "author": "jim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sino-jimmy/grid/issues"
+  },
+  "homepage": "https://github.com/sino-jimmy/grid#readme",
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "express": "^4.14.1",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^2.0.1",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.1.1",
+    "should": "^11.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

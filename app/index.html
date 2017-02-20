@@ -1,0 +1,49 @@
+<html>
+<head>
+	<meta charset = 'utf-8' />
+	<title></title>
+	<script type="text/javascript" src='./lib/jquery/jquery.js'></script>
+	<script type="text/javascript" src='../dist/js/app/app.js'></script>
+</head>
+<body>
+	<div id='myApp'></div>
+	<script type="text/javascript">
+		// $(function(){
+			$.get('http://localhost:1337/grid/gridData/genDatas/100',function(result) {
+				var app = new cml.App({
+					dom: document.getElementById('myApp'),
+					data :result,
+					columnModels: [{
+						text: 'ID',
+						dataIndex: 'id'
+					},{
+						text: '姓名',
+						dataIndex: 'name'
+					},{
+						text:'数学',
+						dataIndex:'maths'
+					},{
+						text:'物理',
+						dataIndex:'physics'
+					},{
+						text: '英语',
+						dataIndex: 'english'
+					},{
+						text: '化学',
+						dataIndex: 'chemistry'
+					},{
+						text: '语文',
+						dataIndex: 'chinese'
+					},{
+						text: 'abc',
+						dataIndex: 'abc'
+					}]
+				});
+				app.render();
+			})			
+		// })
+
+
+	</script>
+</body>
+</html>
