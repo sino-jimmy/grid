@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src='../app/lib/jquery/jquery.js'></script>
+</head>
+<body>
+	<form method='post' onsubmit="return false;" >
+		name:<input name='name' id='name' /><br/>
+		id: <input name='id' id='id'/><br/>
+		<input type='submit' value='submit' id='submit'/>
+	</form>
+
+	<script type="text/javascript">
+		function scriptCallback(data) {
+			console.log('jsonp: ',data);
+		}
+		$(function(){
+			$('#submit').click(function(){
+				var data = {
+					name: $("#name").val(),
+					id: $('#id').val()
+				}
+				// $.ajax({
+				// 	type: 'POST',
+				// 	data: data,
+				// 	url:'http://localhost:1338/ajax/deal',
+				// 	dataType: 'json',
+				// 	success: function(data) {
+				// 		console.log(data);
+				// 	},
+				// 	error:function(a,b) {
+				// 		console.log(b);
+				// 	}
+				// })
+
+				// $.ajax({
+				// 	type: 'get',
+				// 	data: data,
+				// 	url:'http://localhost:1338/ajax/jsonp',
+				// 	dataType: 'jsonp',
+				// 	jsonp: 'callback',
+				// 	// jsonpCallback: 'jcallback',
+				// 	success: function(data) {
+				// 		console.log('ajax success callback ',data);
+				// 	},
+				// 	error:function(a,b) {
+				// 		console.log(b);
+				// 	}
+				// })	
+
+				// $.ajax({
+				// 	type: 'post',
+				// 	data: data,
+				// 	url:'http://localhost:1338/cors',
+				// 	dataType: 'json',
+				// 	success: function(data) {
+				// 		console.log(data);
+				// 	},
+				// 	error:function(a,b) {
+				// 		console.log(b);
+				// 	}
+				// })
+
+				$.ajax({
+					type: 'get',
+					data: data,
+					url:'http://localhost:1338/cors',
+					dataType: 'json',
+					success: function(data) {
+						console.log(data);
+					},
+					error:function(a,b) {
+						console.log(b);
+					}
+				})								
+			})
+
+		})
+
+	</script>
+	<script type="text/javascript" src='http://localhost:1338/ajax/script?callback=scriptCallback&name=jim&id=6305'></script>
+</body>
+</html>
